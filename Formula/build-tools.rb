@@ -2,16 +2,16 @@
 class BuildTools < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/buildtool/build-tools/releases/download/v0.0.1/build-tools_0.0.1_Darwin_x86_64.tar.gz"
-    sha256 "11864c2d1a11d4d8ae91f0862a56f0859b58b16df1a768de82753d00399d70c2"
+    url "https://github.com/buildtool/build-tools/releases/download/v0.0.2/build-tools_0.0.2_Darwin_x86_64.tar.gz"
+    sha256 "4376b70a61ac2946eea42ce385e37bf164391301319076fbba6c830c2494d7a5"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.0.1/build-tools_0.0.1_Linux_x86_64.tar.gz"
-      sha256 "8395ca1faa56888ced800f5456c2cbbd5d20e8b8cb89ac00b469391f87388f30"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.0.2/build-tools_0.0.2_Linux_x86_64.tar.gz"
+      sha256 "0cf24a44914d07d1d2cc5d4303e17f00d67d640838d401fd35cf06afc8ecf6a8"
     end
   end
 
@@ -19,7 +19,6 @@ class BuildTools < Formula
     bin.install "build"
     bin.install "push"
     bin.install "deploy"
-    bin.install "service-setup"
     bin.install "kubecmd"
   end
 end
