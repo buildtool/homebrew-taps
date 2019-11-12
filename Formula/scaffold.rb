@@ -2,16 +2,16 @@
 class Scaffold < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/buildtool/scaffold/releases/download/v0.0.1/scaffold_0.0.1_Darwin_x86_64.tar.gz"
-    sha256 "48a5153855291a25d26278a2655f1eecdf678ea28a9ea6fc1f34102ca8324b19"
+    url "https://github.com/buildtool/scaffold/releases/download/v0.0.2/scaffold_0.0.2_Darwin_x86_64.tar.gz"
+    sha256 "ee6e36ae6bfb62c520e290520439c91a7f05cbb4414103b95de35c6e7208d38f"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/buildtool/scaffold/releases/download/v0.0.1/scaffold_0.0.1_Linux_x86_64.tar.gz"
-      sha256 "5a11ed1deb96a905c41d0f14f540846e1a0a630d5b59dce59e91b37bc0bef0e8"
+      url "https://github.com/buildtool/scaffold/releases/download/v0.0.2/scaffold_0.0.2_Linux_x86_64.tar.gz"
+      sha256 "c54d9d2e0fd41ac5a1fe063193f0c18b84ef97550ff2f174ce1034f986985467"
     end
   end
 
