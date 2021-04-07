@@ -5,22 +5,19 @@
 class BuildTools < Formula
   desc ""
   homepage "https://buildtools.io/"
-  version "0.0.27"
+  version "0.0.28"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/buildtool/build-tools/releases/download/v0.0.27/build-tools_0.0.27_Darwin_x86_64.tar.gz"
-    sha256 "727a65f81d3240612b088a333988e8fac3bcac26743d5730b340c9867c61c009"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/buildtool/build-tools/releases/download/v0.0.28/build-tools_0.0.28_Darwin_x86_64.tar.gz"
+    sha256 "c3498144eacdfb5c903e82b5bb2e13dd32a9af38aa93465d5e58af4c7971e58f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/buildtool/build-tools/releases/download/v0.0.27/build-tools_0.0.27_Linux_x86_64.tar.gz"
-    sha256 "fabeeb2a9fc96e071d24d1fc52dd6b04428320f74dd07724484701f7e10e83a3"
+    url "https://github.com/buildtool/build-tools/releases/download/v0.0.28/build-tools_0.0.28_Linux_x86_64.tar.gz"
+    sha256 "a67f98b7c99acdb1ecd9a740cdd7ed6fb63262c556f7e6ebecf22c7cc86b346e"
   end
 
   def install
-    bin.install "build"
-    bin.install "push"
-    bin.install "deploy"
-    bin.install "kubecmd"
+    bin.install "build-tools"
   end
 end
