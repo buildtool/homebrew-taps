@@ -10,14 +10,17 @@ class BuildTools < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/buildtool/build-tools/releases/download/v0.0.28/build-tools_0.0.28_Darwin_x86_64.tar.gz"
-    sha256 "c3498144eacdfb5c903e82b5bb2e13dd32a9af38aa93465d5e58af4c7971e58f"
+    sha256 "4c0c9e28e602e8af981f8bd6e00327123866b4fece5e6ef496b2252bacf7675f"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/buildtool/build-tools/releases/download/v0.0.28/build-tools_0.0.28_Linux_x86_64.tar.gz"
-    sha256 "a67f98b7c99acdb1ecd9a740cdd7ed6fb63262c556f7e6ebecf22c7cc86b346e"
+    sha256 "ac3026dac10b55c4fc01584173e752f7aea4969d0ff92bb866c269b59003ad5f"
   end
 
   def install
-    bin.install "build-tools"
+    bin.install build
+    bin.install push
+    bin.install deploy
+    bin.install kubecmd
   end
 end
