@@ -5,16 +5,16 @@
 class BuildTools < Formula
   desc ""
   homepage "https://buildtools.io/"
-  version "0.0.30"
+  version "0.1.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/buildtool/build-tools/releases/download/v0.0.30/build-tools_0.0.30_Darwin_x86_64.tar.gz"
-    sha256 "5548b2c313d5500c310b020a0ffebdd1373c4c4303eaf8a7215e14c543c68663"
+    url "https://github.com/buildtool/build-tools/releases/download/v0.1.0/build-tools_0.1.0_Darwin_x86_64.tar.gz"
+    sha256 "6153a7ce3c92d077a531e3197112d9231c4f111162b4360be94926840139f7b7"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/buildtool/build-tools/releases/download/v0.0.30/build-tools_0.0.30_Linux_x86_64.tar.gz"
-    sha256 "1212fff2fe2d427236d02b23bb4ca330f9f9e2740ed1772f709f663628461a7c"
+    url "https://github.com/buildtool/build-tools/releases/download/v0.1.0/build-tools_0.1.0_Linux_x86_64.tar.gz"
+    sha256 "ab30f77368f804676be810e6441b7e0a1badb069d1836c2ed45dedebee655730"
   end
 
   def install
