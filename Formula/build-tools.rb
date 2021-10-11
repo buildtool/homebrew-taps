@@ -5,20 +5,20 @@
 class BuildTools < Formula
   desc ""
   homepage "https://buildtools.io/"
-  version "0.1.4"
+  version "0.2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.1.4/build-tools_0.1.4_Darwin_x86_64.tar.gz"
-      sha256 "42bc31cf422ebe3eafca05e1ce777e5a7cf45327371b3cd8db919ba025e622af"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.2.0/build-tools_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "94cf757a18a5d100b80ea4eb4896a2a4acc6e4d3c30c47d6fec5dfe5c353a438"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.1.4/build-tools_0.1.4_Linux_x86_64.tar.gz"
-      sha256 "2991ffb870ed0e1e16cf80c2cc820f68ca8a4628474ddf240d3166ac6c117684"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.2.0/build-tools_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "badd6651e2e233d1ace3316ab97cad1456c089d8108dd67494550a2eddc5547d"
     end
   end
 
@@ -27,5 +27,6 @@ class BuildTools < Formula
     bin.install "push"
     bin.install "deploy"
     bin.install "kubecmd"
+    bin.install "promote"
   end
 end
