@@ -5,12 +5,12 @@
 class BuildTools < Formula
   desc ""
   homepage "https://buildtools.io/"
-  version "0.2.3"
+  version "0.2.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.2.3/build-tools_0.2.3_Darwin_x86_64.tar.gz"
-      sha256 "5b5f3af9b055e37b2007b29b857ba2154ac8367a1514af9e2430170ab801592e"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.2.4/build-tools_0.2.4_Darwin_x86_64.tar.gz"
+      sha256 "8645d3c7a67a3a06e62440389c908e9efe352c85db273d314e7250f49a23ddf0"
 
       def install
         bin.install "build"
@@ -24,8 +24,8 @@ class BuildTools < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.2.3/build-tools_0.2.3_Linux_x86_64.tar.gz"
-      sha256 "ef6d2bd4b73fd4a7bc09fc516dc52ee723324fa0fbd034faa7b0ccfbd8b4f6d4"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.2.4/build-tools_0.2.4_Linux_x86_64.tar.gz"
+      sha256 "f5ca985db442ee5efc04475fdb22216f4af4d3fbf6471d90ad4121a64c054a33"
 
       def install
         bin.install "build"
