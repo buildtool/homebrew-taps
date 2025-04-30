@@ -5,12 +5,12 @@
 class BuildTools < Formula
   desc ""
   homepage "https://buildtools.io/"
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.3.2/build-tools_0.3.2_Darwin_x86_64.tar.gz"
-      sha256 "ba19b491cec2a3694124005568b4b2de1c92e2146e6b996bf12368019c71a34d"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.3.3/build-tools_0.3.3_Darwin_x86_64.tar.gz"
+      sha256 "4bee6852e094efd40319a91f15550b32c1614ac1eccfead2e83c34a002852f9a"
 
       def install
         bin.install "build"
@@ -21,8 +21,8 @@ class BuildTools < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.3.2/build-tools_0.3.2_Darwin_arm64.tar.gz"
-      sha256 "7cdf7378c73fff66aeb72e3783a8fe8f1192013d389b4b80a5b4b928b670f618"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.3.3/build-tools_0.3.3_Darwin_arm64.tar.gz"
+      sha256 "1aa2bd87099099e38c1ec2c9184e6fd540b4abac3bbc133fe765462750d33601"
 
       def install
         bin.install "build"
@@ -35,32 +35,26 @@ class BuildTools < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/buildtool/build-tools/releases/download/v0.3.2/build-tools_0.3.2_Linux_x86_64.tar.gz"
-        sha256 "dbdac6e15d06814a3503fcd4236b728c4815b044bf2b05780977df6bac10155e"
-
-        def install
-          bin.install "build"
-          bin.install "push"
-          bin.install "deploy"
-          bin.install "kubecmd"
-          bin.install "promote"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/buildtool/build-tools/releases/download/v0.3.3/build-tools_0.3.3_Linux_x86_64.tar.gz"
+      sha256 "0f017e1b290035f9c07ff203c6297a46398ce900c44caa444b09fb6a645a4d5e"
+      def install
+        bin.install "build"
+        bin.install "push"
+        bin.install "deploy"
+        bin.install "kubecmd"
+        bin.install "promote"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/buildtool/build-tools/releases/download/v0.3.2/build-tools_0.3.2_Linux_arm64.tar.gz"
-        sha256 "e1e2c535c67bac51a342f2bb20e3e449632ef35a02d09669c1e945cc7c894af9"
-
-        def install
-          bin.install "build"
-          bin.install "push"
-          bin.install "deploy"
-          bin.install "kubecmd"
-          bin.install "promote"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/buildtool/build-tools/releases/download/v0.3.3/build-tools_0.3.3_Linux_arm64.tar.gz"
+      sha256 "e41b1322ff3e8f982d340f9945c10292b7f5d97b06122867e6e2cc9098c08022"
+      def install
+        bin.install "build"
+        bin.install "push"
+        bin.install "deploy"
+        bin.install "kubecmd"
+        bin.install "promote"
       end
     end
   end
