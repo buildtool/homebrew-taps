@@ -5,12 +5,12 @@
 class BuildTools < Formula
   desc ""
   homepage "https://buildtools.io/"
-  version "0.4.4"
+  version "0.4.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.4.4/build-tools_0.4.4_Darwin_x86_64.tar.gz"
-      sha256 "66c5d4ad312bd9a6bd11738e136db85b1ae6d7716f3e9c58ae2fa7349d1f5300"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.4.5/build-tools_0.4.5_Darwin_x86_64.tar.gz"
+      sha256 "1f5fc05eb6010d57bef369ad0e7269093633d01e96faa7a6aa95150d91945ff5"
 
       def install
         bin.install "build"
@@ -21,8 +21,8 @@ class BuildTools < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.4.4/build-tools_0.4.4_Darwin_arm64.tar.gz"
-      sha256 "36d9c468a938b481afa2c8bc421eb347c0b30c8a54a92e26374c7c175a66a256"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.4.5/build-tools_0.4.5_Darwin_arm64.tar.gz"
+      sha256 "d3142f54088f32f432224d3b21b522ff9ca22eebc9f02bdb6487769021c2fcca"
 
       def install
         bin.install "build"
@@ -36,8 +36,8 @@ class BuildTools < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.4.4/build-tools_0.4.4_Linux_x86_64.tar.gz"
-      sha256 "ef888b5ecb42bce12cb427e1bb4054d801e79b1d3a247a9a2605f7b4d6db0c83"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.4.5/build-tools_0.4.5_Linux_x86_64.tar.gz"
+      sha256 "c036721a2f14bcd7281ebb177e2755b43b106f8fba250d7b821250ebda3c7f04"
       def install
         bin.install "build"
         bin.install "push"
@@ -47,8 +47,8 @@ class BuildTools < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.4.4/build-tools_0.4.4_Linux_arm64.tar.gz"
-      sha256 "cee38f54f3e73090383d8120b0244670d03c9b546331f7515992dd1024b1e430"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.4.5/build-tools_0.4.5_Linux_arm64.tar.gz"
+      sha256 "745053eec40e94e475e34affa18cd38a37d66b9f9eedb2b9266b1b97cc4c24a0"
       def install
         bin.install "build"
         bin.install "push"
