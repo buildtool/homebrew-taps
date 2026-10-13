@@ -5,12 +5,12 @@
 class BuildTools < Formula
   desc ""
   homepage "https://buildtools.io/"
-  version "0.4.13"
+  version "0.4.14"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.4.13/build-tools_0.4.13_Darwin_x86_64.tar.gz"
-      sha256 "5ce2a793cfea67530b0cf790c177e99dd8065379b00715191ddf2b4aad4c53f9"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.4.14/build-tools_0.4.14_Darwin_x86_64.tar.gz"
+      sha256 "1e7d5d8704a7b3459cec77c7e2ce9b7698450f9a719ce3b3fc48f74e94994171"
 
       define_method(:install) do
         bin.install "build"
@@ -21,8 +21,8 @@ class BuildTools < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.4.13/build-tools_0.4.13_Darwin_arm64.tar.gz"
-      sha256 "36bb9793c697fd5bef52ed50b423381420db3a0c8277a860def0149773565695"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.4.14/build-tools_0.4.14_Darwin_arm64.tar.gz"
+      sha256 "584015fb0f1005a42e9c51458bb5fb2a017bee8f9643142ff8eef7f77f8341f9"
 
       define_method(:install) do
         bin.install "build"
@@ -36,8 +36,8 @@ class BuildTools < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.4.13/build-tools_0.4.13_Linux_x86_64.tar.gz"
-      sha256 "36217bb63e7f4571e9276944900bf2a098ad59c85643ccfc8d8f4c91bb9312f4"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.4.14/build-tools_0.4.14_Linux_x86_64.tar.gz"
+      sha256 "8d3b4d23f9c5dcd997abcf6916a147447654cd24e18659cccb482b35804f299d"
       define_method(:install) do
         bin.install "build"
         bin.install "push"
@@ -47,8 +47,8 @@ class BuildTools < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/buildtool/build-tools/releases/download/v0.4.13/build-tools_0.4.13_Linux_arm64.tar.gz"
-      sha256 "53565d5603f255f179124e5c58727e8737f36e5f888717a2e8742c0ec58566bf"
+      url "https://github.com/buildtool/build-tools/releases/download/v0.4.14/build-tools_0.4.14_Linux_arm64.tar.gz"
+      sha256 "37ff018f5e0bd45dc728488c54f341bd40f754b8246d31632b0ab7b21d42c358"
       define_method(:install) do
         bin.install "build"
         bin.install "push"
